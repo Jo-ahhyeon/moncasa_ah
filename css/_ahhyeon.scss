@@ -1,0 +1,267 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+    #minimal .container_1450 {
+        gap: 2rem;
+    }
+
+    /* 왼쪽 배너 */
+    #minimal .ex1_banner {
+      .bg-img {
+      // height:80vw;
+      }
+    }
+
+    /* 제품 리스트 */
+
+    #minimal .product_set li {
+        width: 100%;
+    }
+
+
+    #minimal .bottom-banner {
+        width: 100%;
+        background-image: none !important;
+        background-color: #713131cc;
+    }
+
+    .product_text {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product_price_set {
+      flex-direction: column;
+      margin: 0 0;
+    }
+
+}
+
+#minimal {
+  .ex1_banner {
+    // width: 670px;
+    // flex-shrink: 0;
+  }
+
+  .event_main_title1 {
+    color: $mainColor;
+    font-size: 100px;
+    font-family: $mainFont700;
+    line-height: 150%;
+    letter-spacing: -1.1px;
+    margin-left: 64px;
+  }
+
+  .event_serve_title1 {
+    color: $mainColor;
+    font-size: 24px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    font-family: $mainFont700;
+    line-height: 30px;
+    letter-spacing: -0.264px;
+    margin-left: 55px;
+  }
+
+  .event_title1 {
+    font-size: 64px;
+    font-family: $mainFont700;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    line-height: normal;
+    margin-bottom: 100px;
+    
+    letter-spacing: -2.0px;
+  }
+
+  .percent {
+    margin-left: auto;
+    font-size: 100px;
+    font-family: $mainFont700;
+  }
+
+  // 상품 리스트
+  .badge {
+    background: $mainColor;
+    font-size: 15px;
+    width: 55px;
+    height: 55px;
+    z-index: 10;
+    @include flex-center;
+  }
+
+  .product_set {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(16px, 1vw + 16px, 50px);
+  }
+
+  .product-text {
+    // width: 300px;
+    // height: 56px;
+    // gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .product_price_set {
+    // width: 340px;
+    // height: 18px;
+
+  
+
+    .prod_price {
+      line-height: normal;
+    }
+  }
+
+  .bottom-banner {
+    margin-top: 80px;
+    background-image: url(../img/product/mi_bottom_bg_img.jpg);
+    background-size: cover;
+    background-position: center 46%;
+    background-repeat: no-repeat;
+    padding: 40px 100px;
+    font-size: 30px;
+    font-family: $mainFont600;
+  }
+
+  .tag {
+    background: $mainColor;
+    height: fit-content;
+  }
+
+  .bg-img {
+    background: url("../img/product/event1_main.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 40px;
+  }
+}
+
+// 취향찾기
+
+#taste {
+  .slide-title {
+    font-size: 38px;
+    font-family: $mainFont700;
+  }
+
+  .slide_mid_title {
+    font-size: 16px;
+    color: #999;
+    margin-left: 110px;
+  }
+
+  .slide-question {
+    font-family: $mainFont700;
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .swiper-scrollbar {
+    width: 500px;
+    height: 2px;
+    background: #ddd;
+  }
+
+  .swiper-pagination {
+    font-size: 14px;
+    color: #333;
+    min-width: 40px;
+    white-space: nowrap;
+  }
+
+  .options {
+    gap: 35px;
+    padding-top: 140px;
+  }
+
+  .option-btn {
+    border: 2px solid #909090;
+    padding: 20px 90px;
+    transition: all 0.3s;
+    font-family: $mainFont600;
+
+    &:hover {
+      background-color: #eee !important;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: black;
+    top: calc(50% + 3.5rem);
+    z-index: 10;
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+  }
+
+  .swiper-button-next {
+    right: 20px;
+  }
+
+  .top_fixed_box {
+    z-index: 10;
+  }
+
+  .progress-fixed-wrapper {
+    gap: 10px;
+    width: 400px;
+    top: calc(50% + 2.5rem);
+    left: 108px;
+  }
+
+  .taste_icon {
+    width: 68.333px;
+    height: 50px;
+  }
+
+  .q_num {
+    color: $mainColor;
+    font-family: $mainFont700;
+  }
+
+  .icon_text {
+    font-size: 18px;
+    font-family: $mainFont500;
+    line-height: normal;
+  }
+
+  .position-unset {
+    position: unset !important;
+  }
+}
+
+// 퀵메뉴
+
+#quick {
+  top: calc(55% + 3rem);
+  right: 10px;
+  z-index: 1000;
+
+  ul {
+    list-style: none;
+  }
+
+  a.quick-btn {
+    font-family: $mainFont500;
+    width: 93px;
+    height: 93px;
+    background-color: $mainColor;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+
+    @include flex-center;
+
+    &:hover,
+    &:focus {
+      background-color: #a8a39f;
+      outline: none;
+    }
+  }
+}
+
