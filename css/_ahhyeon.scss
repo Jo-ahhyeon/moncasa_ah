@@ -5,158 +5,203 @@
   padding: 0;
 }
 
+// 기획전1
 @media (max-width: 1199px) {
-    #minimal .container_1450 {
-        gap: 2rem;
+  #minimal {
+    .container_1450 {
+      gap: 2rem;
     }
 
-    /* 왼쪽 배너 */
-    #minimal .ex1_banner {
-      .bg-img {
-      // height:80vw;
-      }
+    .product_set li {
+      width: 100%;
     }
 
-    /* 제품 리스트 */
-
-    #minimal .product_set li {
-        width: 100%;
+    .bottom-banner {
+      width: 100%;
+      background-image: none !important;
+      background-color: #713131cc;
     }
+  }
 
+  .product_text {
+    @include flex-center;
+  }
 
-    #minimal .bottom-banner {
-        width: 100%;
-        background-image: none !important;
-        background-color: #713131cc;
-    }
-
-    .product_text {
-      justify-content: center;
-      align-items: center;
-    }
-
-    .product_price_set {
-      flex-direction: column;
-      margin: 0 0;
-    }
-
+  .product_price_set {
+    flex-direction: column;
+  }
 }
 
 #minimal {
-  .ex1_banner {
-    // width: 670px;
-    // flex-shrink: 0;
-  }
 
   .event_main_title1 {
-    color: $mainColor;
-    font-size: 100px;
+    font-size: clamp(60px, 3vw + 60px, 120px);
     font-family: $mainFont700;
-    line-height: 150%;
     letter-spacing: -1.1px;
-    margin-left: 64px;
   }
 
   .event_serve_title1 {
-    color: $mainColor;
-    font-size: 24px;
+    font-size: clamp(14px, 1vw + 14px, 28px);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     font-family: $mainFont700;
     line-height: 30px;
     letter-spacing: -0.264px;
-    margin-left: 55px;
   }
 
   .event_title1 {
-    font-size: 64px;
+    font-size: clamp(30px, 2vw + 30px, 64px);
     font-family: $mainFont700;
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
     line-height: normal;
-    margin-bottom: 100px;
-    
     letter-spacing: -2.0px;
   }
 
   .percent {
     margin-left: auto;
-    font-size: 100px;
+    margin-top: auto;
+    font-size: clamp(50px, 2vw + 50px, 100px);;
     font-family: $mainFont700;
   }
 
-  // 상품 리스트
   .badge {
-    background: $mainColor;
-    font-size: 15px;
-    width: 55px;
-    height: 55px;
+    font-size: clamp(8px, 1vw + 8px, 15px);
+    width: clamp(25px, 1vw + 25px, 60px);
+    height: clamp(25px, 1vw + 25px, 60px);
     z-index: 10;
     @include flex-center;
   }
 
-  .product_set {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: clamp(16px, 1vw + 16px, 50px);
-  }
-
   .product-text {
-    // width: 300px;
-    // height: 56px;
-    // gap: 20px;
     flex-shrink: 0;
   }
 
-  .product_price_set {
-    // width: 340px;
-    // height: 18px;
-
+  // .prod_price {
+  //   line-height: normal;
+  // }
   
-
-    .prod_price {
-      line-height: normal;
-    }
-  }
-
   .bottom-banner {
-    margin-top: 80px;
     background-image: url(../img/product/mi_bottom_bg_img.jpg);
     background-size: cover;
     background-position: center 46%;
     background-repeat: no-repeat;
-    padding: 40px 100px;
-    font-size: 30px;
+    font-size: clamp(15px, 1vw + 15px, 30px);
     font-family: $mainFont600;
   }
 
   .tag {
-    background: $mainColor;
-    height: fit-content;
-  }
+    background-color: #713131cc;
+   }
 
   .bg-img {
     background: url("../img/product/event1_main.jpg") no-repeat center center;
     background-size: cover;
-    padding: 40px;
+  }
+
+  .swiper-scrollbar {
+    background: #e0e0e0;
+    height: 3px;
+    width: calc(70% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
   }
 }
 
 // 취향찾기
 
+@media (max-width: 1199px) {
+  #taste {
+    // background-color: white !important; 
+  
+    .icon {
+      display: none !important;
+    }
+
+    .options {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      width: auto !important;
+    }
+
+    .progress-fixed-wrapper {
+      width: 400px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 6.5rem !important;
+    }
+
+    .swiper-scrollbar {
+      height: 3px !important;
+    }
+  }
+}
+
+@media (max-width:780px) {
+  #taste {
+    .swiper-button-prev:after,
+    .swiper-button-next:after { 
+      font-size: 18px;
+    }
+
+  .progress-fixed-wrapper {
+      width: 350px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 4rem !important;
+    }
+  }
+}
+
+@media (max-width:450px) {
+  #taste {
+    .options {
+      margin-top: 3rem !important;
+    }
+
+    .progress-fixed-wrapper {
+      width: 300px !important;
+      top: calc(50% + -1.3rem) !important;
+      left: 3rem !important;
+    }
+
+    .slide_mid_title {
+      padding-left: 3rem !important;
+      margin-left: 0 !important;
+      font-size: clamp(16px, 1vw + 16px, 18px) !important;
+    }
+
+    .slide-question {
+      font-size: clamp(18px, 1vw + 18px, 20px) !important;
+    }
+
+  }
+}
+
 #taste {
+
   .slide-title {
-    font-size: 38px;
+    font-size: clamp(16px, 2vw + 16px, 38px);
     font-family: $mainFont700;
   }
 
   .slide_mid_title {
-    font-size: 16px;
-    color: #999;
-    margin-left: 110px;
+  font-size: clamp(16px, 1vw + 16px, 25px);
+  color: #999;
+  letter-spacing: -0.03rem;
+}
+
+  .option-btn {
+    padding: 22px 90px !important;
+
+    @media (max-width:1199px) {
+      padding: 20px min( 11vw, 70px ) !important;
+      
+    }
+      @media (max-width:450px) {
+      padding: 16px 40px !important;
+      font-size: clamp(14px, 1vw + 14px, 16px) !important;
+      
+    }
   }
 
   .slide-question {
     font-family: $mainFont700;
-    font-size: 30px;
+    font-size: clamp(18px, 1vw + 18px, 30px);
     line-height: normal;
   }
 
@@ -173,16 +218,12 @@
     white-space: nowrap;
   }
 
-  .options {
-    gap: 35px;
-    padding-top: 140px;
-  }
-
   .option-btn {
-    border: 2px solid #909090;
-    padding: 20px 90px;
-    transition: all 0.3s;
-    font-family: $mainFont600;
+    border: 1px solid #909090;
+    font-size: clamp(18px, 1vw + 18px, 23px);
+    font-family: $mainFont500;
+    @include flex-center;
+    width: 100%;
 
     &:hover {
       background-color: #eee !important;
@@ -192,7 +233,7 @@
   .swiper-button-next,
   .swiper-button-prev {
     color: black;
-    top: calc(50% + 3.5rem);
+    top: calc(50% + 6.5rem);
     z-index: 10;
   }
 
@@ -202,6 +243,7 @@
 
   .swiper-button-next {
     right: 20px;
+    pointer-events: none;
   }
 
   .top_fixed_box {
@@ -210,8 +252,8 @@
 
   .progress-fixed-wrapper {
     gap: 10px;
-    width: 400px;
-    top: calc(50% + 2.5rem);
+    width: 420px;
+    top: calc(50% + 3.5rem);
     left: 108px;
   }
 
@@ -221,7 +263,6 @@
   }
 
   .q_num {
-    color: $mainColor;
     font-family: $mainFont700;
   }
 
@@ -251,7 +292,6 @@
     font-family: $mainFont500;
     width: 93px;
     height: 93px;
-    background-color: $mainColor;
     font-size: 17px;
     transition: background-color 0.3s ease;
 
